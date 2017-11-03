@@ -1,0 +1,160 @@
+@charset "utf-8";
+/* CSS Document */
+
+@media (max-width: 1330px) {
+  .banner_Scope {
+    display: none
+  }
+}
+
+@media (min-width: 1330px) {
+  .banner_Scope_1330 {
+    display: none
+  }
+
+  @keyframes weizhi {
+    from {
+      color: #666
+    }
+    to {
+      color: #ac2522
+    }
+  }
+  .weizhi a:hover {
+    text-decoration: underline;
+    animation: weizhi 1s;
+    animation-fill-mode: forwards
+  }
+}
+
+.industry_small {
+  float: left;
+  width: 380px;
+  margin: 0 5px;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.industry_small img {
+  width: 100%
+}
+
+.industry_Modular {
+  margin-top: 40px;
+}
+
+.more {
+  width: 100%;
+  height: 260px;;
+  position: absolute;
+  top: 0px;;
+  left: 0;
+  z-index: 1;
+  background-color: hsla(0, 0%, 0%, 0.3);
+  display: none
+}
+
+.more img {
+  width: 40px;
+  margin: 0 auto;
+  line-height: 260px;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  margin-left: -20px;
+  margin-top: -20px;
+}
+
+.industry_small:hover {
+  animation: donghua_industry 1s;
+  animation-fill-mode: forwards
+}
+
+@keyframes donghua_industry {
+  to {
+    box-shadow: 0px 0px 8px #d5d5d5;
+  }
+}
+
+.industry_small .img {
+  width: 100%;
+  -webkit-transition: -webkit-transform 0.6s;
+}
+
+.industry_small:hover .img {
+  -webkit-transform: scale(1.1);
+}
+
+.nav ul li span {
+  display: block;
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  background: #1FAEFF;
+  top: 58px;
+  left: 50%;
+}
+
+.industry_small .line {
+  display: block;
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  background: #ac2522;
+  bottom: 0;
+  left: 50%;
+}
+
+.banner_Scope {
+  margin-top: 70px;
+  width: 100%
+}
+
+.banner_Scope_1330 {
+  margin-top: 103px;
+  width: 100%
+}
+
+.industry {
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 42px;
+}
+
+.all {
+  width: 73px;
+  color: #fff;
+  font-size: 12px;
+  background-color: #ac2522;
+  text-align: center;
+  line-height: 33px;
+  float: left;
+  cursor: pointer
+}
+
+.weizhi {
+  float: right;
+  line-height: 33px;
+  color: #666
+}
+
+.hid_img {
+  overflow: hidden
+}
+
+.In_name_bg {
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+.In_name {
+  font-size: 14px;
+  color: #333;
+}
+
+.In_name_content {
+  font-size: 10px;
+  color: #666;
+  line-height: 40px;
+}

@@ -1,0 +1,56 @@
+/*返回顶部*/
+@media only screen and (min-width: 1024px) {
+  main p {
+    font-size: 14px;
+    font-size: 1rem;
+  }
+}
+
+.cd-top {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  position: fixed;
+  bottom: 40px;
+  right: 100px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+  /* image replacement properties */
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+  background: hsla(0, 1%, 56%, 1.00) url(../../assets/img/cd-top-arrow.svg) no-repeat center 50%;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+
+}
+
+.cd-top.cd-is-visible {
+  /* the button becomes visible */
+  visibility: visible;
+  opacity: 1;
+}
+
+.cd-top:hover {
+  background-color: red;
+  opacity: 1;
+  box-shadow: 0 0 10px hsla(359, 73%, 38%, 1.00);
+}
+
+@media only screen and (min-width: 768px) {
+  .cd-top {
+    right: 20px;
+    bottom: 20px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .cd-top {
+    height: 60px;
+    width: 60px;
+    right: 30px;
+    bottom: 30px;
+  }
+}

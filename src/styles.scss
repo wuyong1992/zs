@@ -1,0 +1,260 @@
+@charset "utf-8";
+/* You can add global styles to this file, and also import other style files */
+
+// 图片宽度100%
+.image_width{
+  max-width: 100%;
+}
+
+/* CSS Document */
+/*css reset*/
+input, body, ul, h1, h2, p, h3 {
+  margin: 0;
+}
+
+h1, h2, h3 {
+  font-weight: normal;
+}
+
+input, ul {
+  padding: 0;
+}
+
+input {
+  outline: none;
+  border: none;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  border: none;
+}
+
+* {
+  font-family: "微软雅黑";
+  font-size: 12px;
+}
+
+/*公共scss*/
+.clearfix {
+  clear: both;
+}
+
+@-webkit-keyframes my_flash1 {
+  0% {
+    transform: translate(10px, 10px);
+  }
+  50% {
+    transform: translate(-10px, -10px);
+  }
+  100% {
+    transform: translate(10px, 10px);
+  }
+}
+
+@-webkit-keyframes my_flash2 {
+  0% {
+    transform: translate(-10px, -10px);
+  }
+  50% {
+    transform: translate(10px, 10px);
+  }
+  100% {
+    transform: translate(-10px, -10px);
+  }
+}
+
+@-webkit-keyframes my_flash3 {
+  0% {
+    transform: translate(-10px, 10px);
+  }
+  50% {
+    transform: translate(10px, -10px);
+  }
+  100% {
+    transform: translate(-10px, 10px);
+  }
+}
+
+@-webkit-keyframes my_flash4 {
+  0% {
+    transform: translate(10px, -10px);
+  }
+  50% {
+    transform: translate(-10px, 10px);
+  }
+  100% {
+    transform: translate(10px, -10px);
+  }
+}
+
+/*主导航 css*/
+.body_padding_t {
+  padding-top: 71px;
+}
+
+.top_box {
+  background-color: transparent;
+  border-bottom-color: rgba(0, 0, 0, 0.1);
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.header {
+  width: 62.5%;
+  margin: 0 auto;
+}
+
+.side_menu {
+  position: absolute;
+  left: 4%;
+  top: 22px;
+  width: 34px;
+  padding: 7px;
+  cursor: pointer;
+  display: none;
+}
+
+.side_menu li {
+  height: 2px;
+  background-color: #666;
+  margin-bottom: 6px;
+  border-radius: 6px;
+}
+
+.logo {
+  padding: 14px 0;
+  float: left;
+}
+
+@media (max-width: 1500px) {
+  .logo {
+    width: 230px;
+    padding: 18px 0;
+  }
+
+  .logo img {
+    width: 100%;
+  }
+}
+
+.nav_box {
+  float: right;
+}
+
+.nav, .search, .tel, .language {
+  float: left;
+}
+
+.main_nav {
+  float: left;
+  font-size: 15px;
+  position: relative;
+}
+
+.main_nav a {
+  display: block;
+  color: #444;
+  line-height: 70px;
+  padding: 0 20px;
+  font-size: 14px;
+}
+
+.main_nav .active {
+  display: block;
+  border-bottom: #c30b0d 3px solid;
+  line-height: 64px;
+  padding-top: 3px;
+  color: #c30b0d;
+}
+
+.main_nav span {
+  display: block;
+  width: 100%;
+  background-color: #c30b0d;
+  position: absolute;
+  bottom: 0;
+}
+
+.sub_nav {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 71px;
+  background-color: #F7F7F7;
+  padding: 0;;
+  display: none;
+  width: 150px;
+}
+
+@keyframes sub_nav {
+  from {
+    background-color: #F7F7F7;
+    color: #333
+  }
+  to {
+    background-color: #9F1214;
+    color: #fff
+  }
+}
+
+.sub_nav a:hover {
+  animation: sub_nav 0.5s;
+  animation-fill-mode: forwards
+}
+
+.sub_nav a {
+  color: #333;
+  font-size: 12px;
+  line-height: 35px;
+  padding: 0;
+  padding: 0 20px;
+  border-bottom: #F1F1F1 solid 1px
+}
+
+.search {
+  padding: 27px 0 26px;
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+.tel {
+  padding-left: 24px;
+  position: relative;
+  color: #444;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 18px;
+  margin: 26px 20px;
+}
+
+.tel img {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.language {
+  color: #444;
+}
+
+.language a {
+  line-height: 70px;
+  font-size: 10px;
+  color: #444;
+}
+
+/*END 主导航 css*/

@@ -1,0 +1,11 @@
+<div class="swiper-container" id="swiper-banner" >
+  <div class="swiper-wrapper" >
+    <div class="swiper-slide" *ngFor="let bannerUrl of bannerUrls">
+      <img class="image_width" src="{{bannerUrl}}">
+    </div>
+  </div>
+
+  <!--左右按钮-->
+  <div class="swiper-button-prev banner-button-prev"></div>
+  <div class="swiper-button-next banner-button-next"></div>
+</div>

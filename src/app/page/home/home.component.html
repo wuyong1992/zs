@@ -1,0 +1,355 @@
+<!--banner-->
+<app-banner [bannerUrls]="bannerUrls"></app-banner>
+
+<!--众生产业-->
+<div class="Industry">
+  <div class="Industry_name">
+    <div class="cy">众生产业<br><span style="font-size: 14px;">Zhongsheng Industry</span></div>
+    <div class="gd" style="margin-top: 30px;"><a href="Industry.html" style="color: #666">更多>></a></div>
+    <div class="clearfix"></div>
+  </div>
+  <!---->
+  <div class="In_win_box swiper-container" id="swiper-zsIndustry">
+    <div class="In_img_box swiper-wrapper">
+      <div class="swiper-slide toBigDiv" *ngFor="let article of industryArticleList">
+        <img src="{{article.thumbnail}}" alt="" class="toBig image_width">
+        <div class="In_text">
+          <span class="In_title">{{article.title}}</span>
+          <span class="title_content">{{article.enTitle}}</span></div>
+        <div class="hid_add">
+          <img src="../../../assets/img/+.png" alt="">
+        </div>
+      </div>
+    </div>
+    <div class="swiper-button-prev myLeftBtn" id="zsIndustry-btn-prev"></div>
+    <div class="swiper-button-next myRightBtn" id="zsIndustry-btn-next"></div>
+  </div>
+</div>
+
+<!--关于我们-->
+<div class="aboutus">
+  <div class="aboutus_top">
+    <div class="aboutus_top_text">关于我们<br><span style="font-size: 14px;">About Us</span></div>
+
+    <div class="clearfix"></div>
+  </div>
+  <div class="ab_content">
+    <div class="ab_content_sm">
+      <span class="ab_name">{{aboutUsArticle?.title}}</span><br><br>
+      <span class="content_clip" *ngIf="aboutUsArticle?.introduction">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{aboutUsArticle.introduction | str:'90'}}</span>
+
+      <a href="About us.html">
+        <div class="ab_button">MORE+
+          <div class="ab_button_hid"></div>
+        </div>
+      </a>
+    </div>
+
+    <div class="ab_img"><img src="{{aboutUsArticle?.thumbnail}}"></div>
+
+  </div>
+  <div class="clearfix"></div>
+</div>
+
+<!--业务范围-->
+<div class="ZS_scope">
+  <div class="scope_name">
+    <div class="yw">业务范围<br><span style="font-size: 14px;">Zhongsheng Industry</span></div>
+    <div class="yw_more" style="margin-top: 30px;">更多>></div>
+    <div class="clearfix"></div>
+  </div>
+
+  <div class="zs_win_box swiper-container" id="swiper-serviceScope">
+    <div class="zs_img_box swiper-wrapper">
+      <div class="swiper-slide toBigDiv" *ngFor="let scopeArticle of serviceScopeArticleList">
+        <a href="">
+          <div class="zs_hid_img">
+            <img src="{{scopeArticle.thumbnail}}" alt="">
+          </div>
+          <div class="zs_text">
+            <span class="zs_title">{{scopeArticle.title}}</span>
+            <span class="zs_title_content">{{scopeArticle.introduction | str: '90'}}</span>
+          </div>
+          <span class="zs_jiantou">
+            <img src="../../../assets/img/Arrow.png" alt="">
+          </span>
+        </a>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+    <div class="swiper-button-prev myLeftBtn" id="serviceScope-btn-prev"></div>
+    <div class="swiper-button-next myRightBtn" id="serviceScope-btn-next"></div>
+  </div>
+
+
+</div>
+
+<!--新闻中心-->
+<!--<div class="new">
+  <div class="new_name">
+    <div class="nw">新闻中心<br><span style="font-size: 14px;">News</span></div>
+    <ul>
+      <li class="qb">全部</li>
+      <a href="">
+        <li class="rd">热点活动</li>
+      </a>
+      <a href="">
+        <li class="dt">众生动态</li>
+      </a>
+      <a href="">
+        <li>更多</li>
+      </a>
+    </ul>
+
+    <div class="clearfix"></div>
+  </div>
+
+  <div class="nw_big">
+    <a href="">
+      <div class="nw_left">
+
+        <div class="nw_content">
+          <span class="nw_time">09/27</span>
+          <span class="nw_title">{{newsCenterArticleList[0].title}}</span>
+          <div class="nw_text">
+            <span>{{newsCenterArticleList[0].introduction | str: '50'}}</span>
+          </div>
+          <div class="nw_img">
+            <img src="{{newsCenterArticleList[0].thumbnail}}">
+            <div class="clearfix"></div>
+          </div>
+          <div class="nw_more">
+            <img class="add1" src="../../../assets/img/-.png">
+            <img class="add2" src="../../../assets/img/-（1）.png">
+          </div>
+          <div class="clearfix"></div>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+    </a>
+    <div class="nw_right">
+      <ul>
+        <a href="">
+          <li>
+            <div class="nw_right_sm">
+              <div class="nw_right_sm_name">●&nbsp;&nbsp;&nbsp;&nbsp;{{newsCenterArticleList[1].title}}</div>
+              <div class="nw_right_sm_content">
+                {{newsCenterArticleList[1].introduction | str: '30'}}
+              </div>
+              <div class="clearfix"></div>
+            </div>
+            <div class="nw_right_time">{{newsCenterArticleList[1].updateTime}}</div>
+            <div class="nw_more_sm">
+              <div class="nw_more_sm_hid">
+                <img src="../../../assets/img/Arrow.png">
+                <img src="../../../assets/img/Arrow.png">
+                <div class="clearfix"></div>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+            <div class="clearfix"></div>
+          </li>
+        </a>
+        <a href="">
+          <li>
+            <div class="nw_right_sm1">
+              <div class="nw_right_sm_name1">●&nbsp;&nbsp;&nbsp;&nbsp;{{newsCenterArticleList[1].title}}</div>
+              <div class="nw_right_sm_content1">
+                全球首家、也是目前唯一一家利用生物技术大规模实施长链二元酸、生物丁醇、生物基戊二胺等多项革命性产业化技术的企业。凯赛专注于自主开发经济上可行的工业生物技术解决方案，并通过工业生物技术产业化制造新型生物材料
+              </div>
+              <div class="clearfix"></div>
+            </div>
+            <div class="nw_right_time1">09/26</div>
+            <div class="nw_more_sm1">
+              <div class="nw_more_sm_hid1"><img src="../../../assets/img/Arrow.png"><img
+                src="../../../assets/img/Arrow.png">
+                <div class="clearfix"></div>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+            <div class="clearfix"></div>
+          </li>
+        </a>
+        <a href="">
+          <li>
+            <div class="nw_right_sm2">
+              <div class="nw_right_sm_name2">●&nbsp;&nbsp;&nbsp;&nbsp;{{newsCenterArticleList[1].title}}</div>
+              <div class="nw_right_sm_content2">
+                全球首家、也是目前唯一一家利用生物技术大规模实施长链二元酸、生物丁醇、生物基戊二胺等多项革命性产业化技术的企业。凯赛专注于自主开发经济上可行的工业生物技术解决方案，并通过工业生物技术产业化制造新型生物材料
+              </div>
+              <div class="clearfix"></div>
+            </div>
+            <div class="nw_right_time2">09/26</div>
+            <div class="nw_more_sm2">
+              <div class="nw_more_sm_hid2"><img src="../../../assets/img/Arrow.png"><img
+                src="../../../assets/img/Arrow.png">
+                <div class="clearfix"></div>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+            <div class="clearfix"></div>
+          </li>
+        </a>
+      </ul>
+      <div class="clearfix"></div>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+</div>-->
+<div class="new">
+  <div class="new_name">
+    <div class="nw">新闻中心<br><span style="font-size: 14px;">News</span></div>
+    <ul>
+      <li class="qb">全部</li>
+      <a href="">
+        <li class="rd">热点活动</li>
+      </a>
+      <a href="">
+        <li class="dt">众生动态</li>
+      </a>
+      <a href="">
+        <li>更多</li>
+      </a>
+    </ul>
+
+    <div class="clearfix"></div>
+  </div>
+
+  <div class="nw_big">
+    <a href="">
+      <div class="nw_left">
+
+        <div class="nw_content">
+          <span class="nw_time">{{newsCenterArticle1?.updateTime | date: 'MM/dd'}}</span>
+          <span class="nw_title">{{newsCenterArticle1?.title}}</span>
+          <div class="nw_text">
+            <span>{{newsCenterArticle1?.introduction}}</span>
+          </div>
+          <div class="nw_img">
+            <img src="{{newsCenterArticle1?.thumbnail}}">
+            <div class="clearfix"></div>
+          </div>
+          <div class="nw_more">
+            <img class="add1" src="../../../assets/img/-.png">
+            <img class="add2" src="../../../assets/img/-（1）.png">
+          </div>
+          <div class="clearfix"></div>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+    </a>
+    <div class="nw_right">
+      <ul>
+        <a href="">
+          <li>
+            <div class="nw_right_sm">
+              <div class="nw_right_sm_name">●&nbsp;&nbsp;&nbsp;&nbsp;{{newsCenterArticle2?.title}}</div>
+              <div class="nw_right_sm_content">
+                {{newsCenterArticle2?.introduction}}
+              </div>
+              <div class="clearfix"></div>
+            </div>
+            <div class="nw_right_time">{{newsCenterArticle2?.updateTime | date: 'MM/dd'}}</div>
+            <div class="nw_more_sm">
+              <div class="nw_more_sm_hid">
+                <img src="../../../assets/img/Arrow.png">
+                <img src="../../../assets/img/Arrow.png">
+                <div class="clearfix"></div>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+            <div class="clearfix"></div>
+          </li>
+        </a>
+        <a href="">
+          <li>
+            <div class="nw_right_sm1">
+              <div class="nw_right_sm_name1">●&nbsp;&nbsp;&nbsp;&nbsp;{{newsCenterArticle3?.title}}</div>
+              <div class="nw_right_sm_content1">
+                {{newsCenterArticle3?.introduction}}
+              </div>
+              <div class="clearfix"></div>
+            </div>
+            <div class="nw_right_time1">{{newsCenterArticle3?.updateTime | date: 'MM/dd'}}</div>
+            <div class="nw_more_sm1">
+              <div class="nw_more_sm_hid1">
+                <img src="../../../assets/img/Arrow.png">
+                <img src="../../../assets/img/Arrow.png">
+                <div class="clearfix"></div>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+            <div class="clearfix"></div>
+          </li>
+        </a>
+        <a href="">
+          <li>
+            <div class="nw_right_sm2">
+              <div class="nw_right_sm_name2">●&nbsp;&nbsp;&nbsp;&nbsp;{{newsCenterArticle4?.title}}</div>
+              <div class="nw_right_sm_content2">
+                {{newsCenterArticle4?.introduction}}
+              </div>
+              <div class="clearfix"></div>
+            </div>
+            <div class="nw_right_time2">{{newsCenterArticle4?.updateTime | date: 'MM/dd'}}</div>
+            <div class="nw_more_sm2">
+              <div class="nw_more_sm_hid2">
+                <img src="../../../assets/img/Arrow.png">
+                <img src="../../../assets/img/Arrow.png">
+                <div class="clearfix"></div>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+            <div class="clearfix"></div>
+          </li>
+        </a>
+      </ul>
+      <div class="clearfix"></div>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+</div>
+
+<!--关于我们-->
+
+<footer>
+  <div class="contact">联系我们<br>
+    <span>Contact us</span>
+  </div>
+  <div class="contact_sm1" style=" ">
+    <div class="contactus">
+      <ul>
+        <li><img src="../../../assets/img/tell.svg" alt="">电话：123-456-789</li>
+        <li><img src="../../../assets/img/code.svg" alt="">邮编：236000</li>
+        <li><img src="../../../assets/img/landmark.svg" alt="">地址：安徽省合肥市政务区华邦世贸城B座21楼</li>
+      </ul>
+      <ul>
+        <li><img src="../../../assets/img/fax.svg" alt="">传真：123-456-789</li>
+        <li><img src="../../../assets/img/envelope.svg" alt="">邮箱：236000</li>
+
+      </ul>
+      <div class="guanzhu">
+        <span>关注我们：</span>
+        <img class="chat1" src="../../../assets/img/wechat (2).svg" alt="">
+        <img class="bo1" src="../../../assets/img/weibo (1).svg" alt="">
+        <img class="chat2" src="../../../assets/img/wechat (1).svg" alt="">
+        <img class="bo2" src="../../../assets/img/weibo (2).svg" alt="">
+
+
+      </div>
+      <div class="download">
+        <span>众生商城APP：</span>
+        <img class="phone" src="../../../assets/img/phone.svg" alt="">
+      </div>
+
+      <div class="erweima">
+        <img class="wechat_erweima" src="../../../assets/img/erweima——wechat.png" alt="">
+        <img class="weibo_erweima" src="../../../assets/img/erweima——weibo.png" alt="">
+        <img class="stor" src="../../../assets/img/erweima——app.png" alt="">
+      </div>
+      <div class="clearfix"></div>
+    </div>
+
+  </div>
+  <div class="clearfix"></div>
+</footer>
